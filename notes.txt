@@ -1,0 +1,52 @@
+https://pythonise.com
+https://www.youtube.com/watch?v=mtiyVsRQTA8&t=461s
+
+mkdir C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart
+Open this folder with VS Code.
+Start VS Code cmd terminal
+cd C:\Programs\mongodb
+C:\Programs\mongodb>run.bat
+Start another VS Code cmd terminal:
+C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>python -m venv env --prompt MONGO
+C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>env\Scripts\activate
+(MONGO) C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>
+(MONGO) C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>pip list
+Package    Version
+---------- -------
+pip        19.2.3
+setuptools 41.2.0
+(MONGO) C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>pip install mongoengine
+(MONGO) C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>pip list
+Package     Version
+----------- -------
+mongoengine 0.19.1
+pip         19.2.3
+pymongo     3.10.1
+setuptools  41.2.0
+six         1.14.0
+
+(MONGO) C:\Users\Alex\AppData\Roaming\projects\python_mongodb_quickstart>mongo
+> show dbs
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+mongo-dev-db  0.000GB
+> use mongo-dev-db
+switched to db mongo-dev-db
+> db
+mongo-dev-db
+> show collections
+blog_post
+user
+>
+
+Using Windows WSL
+Open bash terminal in VS Code
+cd /mnt/c/wsl
+$ mongod
+Open another bash terminal
+cd /mnt/c/wsl/projects/pythonise/tutorials/python_tutorials/python_mongodb/python_mongodb_quickstart
+$ python -m venv env --prompt MONGO
+$ ...
+
+Mongoengine: http://mongoengine.org/
